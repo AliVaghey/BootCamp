@@ -8,13 +8,32 @@ $x = [
     null
 ];
 
+print_r($x);
+
+echo "hello $x[1]";
+
+$y = []; //an empty array
+$y[] = readline('enter your input : ');
+
+print_r($y);
+
+//آرایه های انجمنی
 $y = [
-    "Ali Vaghey" => "09399412613",
-    'Amir' => "93r79w7r9w"
+    'Ali' => 123,
+    'Shirin' => 341,
+    'amir' => "ali",
+    [
+        4,
+        5
+    ]
 ];
 
-$name = readline("what's your name? ");
-$phone = readline("what's your phone number? ");
-$y[$name] = $phone;
+print_r($y);
 
-echo $y['amir'];
+echo $y['Ali']; // output: 123
+
+echo $y[0][1];// output: 5,
+
+$y['Ali'] = null;
+unset($y['Ali']);
+print_r($y);
